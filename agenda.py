@@ -13,7 +13,11 @@ def cadastrar_contato():
 
 
 def listar_contatos():
-    pass
+    if not contatos:
+        print("Nenhum contato cadastrado.")
+        return
+    for indice, contato in enumerate(contatos, start=1):
+        print(f"{indice}. {contato['nome']} - {contato['telefone']} - {contato['email']}")
 
 
 def buscar_contato():
